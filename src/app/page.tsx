@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Link from 'next/link';
+import SharedComponent from '@/components/shared-component';
 
 export default function Home() {
   return (
-    <div>
-      Home Page
-    </div>
+    <SharedComponent imageUrl={'/home.jpg'} imageAlt='Home Image' titile='Beautiful Seen From Punakha Bhutan' />
   );
 }
