@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { ReactNode } from 'react';
 
 interface CommonDataType {
     imageUrl: string;
     imageAlt: string;
     titile: string;
+    children?: ReactNode;
 }
 
 export default function SharedComponent(data: CommonDataType) {
@@ -23,6 +25,7 @@ export default function SharedComponent(data: CommonDataType) {
                 {data.titile}
             </h1>
         </div>
+        <div className="w-full">{data.children}</div>
       </div>
     );
 }
