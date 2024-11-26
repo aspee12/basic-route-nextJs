@@ -9,7 +9,7 @@ export default function Header() {
           <Link href="/performance"> Performance </Link>
           <Link href="/reliability"> Reliability </Link>
           <Link href="/scale"> Scale </Link> 
-          <Link href="/snippet">Snippet</Link>
+          <Link href="/snippet/details">Snippet</Link>
         </div>
       </nav>
     </div>

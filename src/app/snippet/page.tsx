@@ -1,8 +1,22 @@
 import SharedComponent from '@/components/shared-component';
+import { db } from '@/db ';
+import { redirect } from 'next/navigation';
 
 export default function CreateSnippetPage() {
+    async function createSnippet(formData: FormData) {
+      // This needs to be a server action
+      "use server";
+      const title = formData.get("title");
+      const code = formData.get("code");
+
+      const snappet = await db.snippet.create({
+        data: {title,code},
+      });
+      redirect('/snippet/details');
+    }
+
     return (
-      <form>
+      <form action={createSnippet}>
         <SharedComponent imageUrl={'/realibility.jpg'} imageAlt='Relibility Image' titile='Bhutan Is Committed To Sustainable Tourism '>
             <div className='container mx-auto flex flex-col gap-4 mt-12'>
                 <div className='flex flex-col justify-center items-center gap-4'>
