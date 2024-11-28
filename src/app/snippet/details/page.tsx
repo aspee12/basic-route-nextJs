@@ -10,7 +10,7 @@ export default async function DisplaySnippetPage() {
             <div className='container mx-auto flex flex-col mt-2 w-[45%] border rounded p-2' key={snippet.id}>
                 <div className='flex justify-between items-center text-white'>
                     <span className='text-2xl'>{snippet.title}</span>
-                    <Link className='text-xl mr-4 text-blue-500 hover:underline' href={''}> View More </Link>
+                    <Link className='text-xl mr-4 text-blue-500 hover:underline' href={`/snippet/${snippet.id}`}> View More </Link>
                 </div>
             </div>
         );
